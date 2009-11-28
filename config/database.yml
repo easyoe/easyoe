@@ -16,10 +16,14 @@ test:
   timeout: 5000
 
 staging:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: easyoe_staging
   pool: 5
-  timeout: 5000
+  username: root
+  password:
+  socket: /tmp/mysql.sock
 
 production:
   adapter: sqlite3
